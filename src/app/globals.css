@@ -1,0 +1,215 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.form-container {
+  max-width: 500px;
+  max-height: 680px;
+  position: absolute;
+  margin: -250px -250px;
+  top: 40%;
+  left: 60%;
+  background-color: white !important;
+  box-shadow: 12px 13px 10px 1000px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: hidden !important;
+  padding: 10px 10px !important;
+  z-index: 60;
+  transition: all 0.3s ease-in-out;
+}
+.form-container input,
+textarea,
+select {
+  width: 450px;
+}
+.form-container textarea {
+  min-height: 150px;
+}
+.close {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.close button {
+  border-radius: 5px;
+}
+.c-inp {
+  width: 50px !important;
+  align-items: center;
+  float: right;
+}
+.cr-btn {
+  background-color: #f1a300 !important;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.cr-btn:disabled {
+  background-color: #f1c870;
+  color: rgb(54, 54, 54);
+}
+.create-task {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.m-drop-shadow {
+  box-shadow: 2px 5px 18px rgba(0, 0, 0, 0.1), 5px 2px 18px rgba(0, 0, 0, 0.1);
+}
+.m-bg-white {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.ring-0 {
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width))
+    var(--tw-ring-color) !important;
+}
+.mw-95 {
+  width: 95%;
+}
+.mw-5 {
+  width: 5%;
+}
+.v-h120 {
+  min-height: 120vh;
+}
+.v-h110 {
+  min-height: 110vh;
+}
+.dropdown {
+  position: relative !important;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(85, 83, 83);
+  font-family: inherit;
+  margin: 0;
+  background: none !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  right: 0 !important;
+  top: 30px !important;
+}
+.z-0 {
+  z-index: none !important;
+}
+.dropdown-content button {
+  float: none;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  z-index: -1;
+}
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.l-50 {
+  left: 50% !important;
+}
+.t-40 {
+  top: 40% !important;
+}
+.fs-xl {
+  font-size: 1.5rem !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.placeholder {
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.align-center {
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: center !important;
+  text-align: center !important;
+  margin: auto;
+  /* margin-block-start: 10% !important; */
+}
+input[type="file"] {
+  display: none !important;
+}
+.m-h-sm {
+  min-height: 12rem;
+}
+@media only screen and (max-width: 360px) {
+  .form-container {
+    width: 300px;
+    height: 580px;
+    position: absolute;
+    margin: -250px -250px;
+    top: 44%;
+    left: 78%;
+    background-color: white !important;
+    box-shadow: 12px 13px 10px 1000px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden !important;
+    padding: 10px 10px !important;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+  }
+  .form-container input,
+  textarea,
+  select {
+    width: 250px;
+    height: 48px;
+    margin: 6px !important;
+  }
+
+}
